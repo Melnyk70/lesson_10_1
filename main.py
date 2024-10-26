@@ -1,10 +1,22 @@
-# ДЗ 10.1. Форматування тексту з snake_case на CamelCase
-# Написати програму, яка перетворює ім`я змінної у форматі snake_case у формат CamelCase.
-# Вивести результат за допомогою print. Доповнити код:
-# s = input()
-# your code here
-s = input("Введіть текст з стилем snake_case:")
-new_s = s.replace("_"," ")
-new_s = new_s.title()
-s = new_s.replace(" ","")
-print("Відформатований текст з стилем CamelCase:   ", s)
+# ДЗ 10.1. Генераторна функція
+# Напишіть функцію first_word, яка у переданому рядку знайде її перше слово.
+# При розв'язанні задачі зверніть увагу на наступні моменти:
+# У рядку можуть зустрічаються крапки та/або коми
+# Рядок може починатися з літери або, наприклад, з пробілу або точки
+# У слові може бути апостроф і він є частиною слова
+# Весь текст може бути представлений лише одним словом та все
+# Вхідні параметри: Рядок.
+# Вихідні параметри: Рядок.
+
+def first_word(text):
+    """ Пошук першого слова """
+    pass
+
+
+assert first_word("Hello world") == "Hello", 'Test1'
+assert first_word("greetings, friends") == "greetings", 'Test2'
+assert first_word("don't touch it") == "don't", 'Test3'
+assert first_word(".., and so on ...") == "and", 'Test4'
+assert first_word("hi") == "hi", 'Test5'
+assert first_word("Hello.World") == "Hello", 'Test6'
+print('OK')
